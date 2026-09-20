@@ -2,7 +2,7 @@
 
 Welcome to the **AMS (Advanced Electronics Manufacturing Solutions)** Portal repository.
 
-AMS is India's Semiconductor & Advanced Electronics Ecosystem Partner, operating under the aegis of the **AJAN HFL Global Investment (AHFL)** ecosystem.
+AMS is an independent standalone enterprise portal for India's Semiconductor & Advanced Electronics Ecosystem Partner, delivering end-to-end commercial solutions across manufacturing, packaging, academies, and national supply chains.
 
 ---
 
@@ -47,4 +47,3 @@ The AMS portal provides a dual-interface architecture:
 This repository is fully static (HTML5, CSS3, ES6 JavaScript) and zero-dependency, designed to be served directly from GitHub Pages or any CDN edge.
 
 - **GitHub Pages URL**: [https://milliondollaruae.github.io/AMS/](https://milliondollaruae.github.io/AMS/)
-- **Parent Portal**: [https://milliondollaruae.github.io/HFLPortal/](https://milliondollaruae.github.io/HFLPortal/)

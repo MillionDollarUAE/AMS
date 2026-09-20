@@ -1,5 +1,5 @@
 /**
- * AMS Sub-Domain Portal — ams.js
+ * AMS Standalone Enterprise Portal — ams.js
  * Logic for AMS External (Public Ecosystem) & Internal (12-Leader Intranet),
  * 12 Executive leadership roles, and 26-Chapter Odisha Strategy Intranet.
  */
@@ -16,7 +16,7 @@ const AMS_LEADERS = [
       'Institutional development with central and state governments',
       'Ecosystem architecture & partner credibility',
       'Global technology partnerships & sovereign MOUs',
-      'Corporate governance & group alignment with AHFL holding'
+      'Corporate governance, institutional compliance & board leadership'
     ],
     value: 'Ensures overall corporate vision and strategic positioning in the national semiconductor grid.'
   },
@@ -345,3 +345,44 @@ function loadChapter(index) {
     `;
   }
 }
+
+/* ============================================================
+   THEME TOGGLE
+   ============================================================ */
+function initAmsTheme() {
+  const saved = localStorage.getItem('ams-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateAmsThemeIcon(saved);
+}
+
+function toggleAmsTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('ams-theme', next);
+  updateAmsThemeIcon(next);
+}
+
+function updateAmsThemeIcon(theme) {
+  const icon = document.getElementById('themeIcon');
+  if (!icon) return;
+  if (theme === 'light') {
+    icon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
+  } else {
+    icon.innerHTML = `
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    `;
+  }
+}
+
+// Initialize theme on DOM load
+document.addEventListener('DOMContentLoaded', initAmsTheme);
+

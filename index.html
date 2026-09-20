@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMS — Advanced Electronics Manufacturing Solutions | Sub-Domain Portal</title>
+  <title>AMS — Advanced Electronics Manufacturing Solutions</title>
   <meta name="description"
-    content="AMS — Advanced Electronics Manufacturing Solutions. India's Semiconductor & Advanced Electronics Ecosystem Partner. Sub-Domain of AHFL Global Enterprise Ecosystem." />
+    content="AMS — Advanced Electronics Manufacturing Solutions. India's Semiconductor &amp; Advanced Electronics Ecosystem Partner." />
   <meta name="theme-color" content="#050b14" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap"
     rel="stylesheet" />
 
   <!-- Stylesheets -->
@@ -28,23 +28,6 @@
   <div class="grid-dots" aria-hidden="true"></div>
 
   <div class="wrapper">
-
-    <!-- ============================================
-         PARENT-TO-CHILD PORTAL NAVIGATION BAR
-    ============================================= -->
-    <aside class="ams-parent-bar" aria-label="Parent Portal Link">
-      <a href="https://milliondollaruae.github.io/HFLPortal/" class="parent-return-link" title="Return to AHFL Parent Portal" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <line x1="19" y1="12" x2="5" y2="12" />
-          <polyline points="12 19 5 12 12 5" />
-        </svg>
-        Return to AHFL Parent Portal (portal.ahfl.com)
-      </a>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <span class="subdomain-badge">SUB-DOMAIN: ams.ahfl.com</span>
-        <span class="text-muted" style="font-size: 0.72rem;">Advanced Electronics Subsidiary of AHFL</span>
-      </div>
-    </aside>
 
     <!-- ============================================
          AMS NAVBAR
@@ -77,9 +60,19 @@
       </div>
 
       <div style="display: flex; align-items: center; gap: 12px;">
-        <a href="https://milliondollaruae.github.io/HFLPortal/" class="subdomain-link" style="font-size: 0.78rem;" target="_blank" rel="noopener">
-          AHFL Parent &nearr;
-        </a>
+        <button class="theme-toggle" id="themeToggleBtn" onclick="toggleAmsTheme()" aria-label="Toggle theme" title="Toggle light/dark theme" style="background: rgba(255,255,255,0.06); border: 1px solid var(--border); border-radius: var(--radius-full); width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; color: var(--ams-cyan); cursor: pointer; transition: all var(--transition);">
+          <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -133,7 +126,7 @@
       </section>
 
       <!-- Section: Capabilities -->
-      <section class="ams-section">
+      <section class="ams-section" id="capabilities">
         <div class="section-head">
           <div>
             <h2 class="section-title">Our Core Capabilities</h2>
@@ -283,7 +276,7 @@
       </section>
 
       <!-- Section: ERGI 24-Month Roadmap & Revenue Mix -->
-      <section class="ams-section">
+      <section class="ams-section" id="ergi">
         <div class="section-head">
           <div>
             <h2 class="section-title">Early Revenue Generation Initiative (ERGI)</h2>
@@ -645,16 +638,17 @@
           <p class="footer-tagline">
             "A Smarter, Self-Reliant Tomorrow for India and the World."
             <br /><br />
-            <strong>Sub-Domain of AHFL Global Enterprise Ecosystem</strong>
+            <strong>National Semiconductor &amp; Advanced Electronics Ecosystem</strong>
           </p>
         </div>
         <div class="footer-col">
-          <h5>AMS Sub-Domain</h5>
+          <h5>AMS Ecosystem</h5>
           <ul class="footer-links">
             <li><a href="#" onclick="setAmsView('external')">External Partner Ecosystem</a></li>
             <li><a href="#" onclick="setAmsView('internal')">12-Leader Intranet</a></li>
+            <li><a href="#capabilities">Core Capabilities</a></li>
+            <li><a href="#ergi">24-Month Roadmap</a></li>
             <li><a href="#odisha">Odisha Industrial Strategy</a></li>
-            <li><a href="https://milliondollaruae.github.io/HFLPortal/" target="_blank" rel="noopener">← AHFL Parent Portal</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -677,7 +671,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div>&copy; 2026 AMS &mdash; Advanced Electronics Manufacturing Solutions. Subsidiary of AHFL.</div>
+        <div>&copy; 2026 AMS &mdash; Advanced Electronics Manufacturing Solutions. All rights reserved.</div>
         <div>CONFIDENTIAL INTRANET ARCHITECTURE</div>
       </div>
     </footer>
